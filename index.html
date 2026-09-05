@@ -41,16 +41,28 @@
       <div id="hud" class="hud">
         <div class="hud-row">
           <button id="home-btn" class="pixel-btn hud-btn" type="button" title="Torna alla home">⌂ HOME</button>
+          <button id="msg-btn" class="pixel-btn hud-btn" type="button" title="Leggi il messaggio" aria-expanded="false">
+            ✉ <span id="msg-count">0/5</span>
+          </button>
           <button id="quest-btn" class="pixel-btn hud-btn" type="button" title="Apri le quest" aria-expanded="false">
             ✎ QUEST <span id="quest-count">0/5</span>
           </button>
         </div>
-        <div id="hidden-text" class="hidden-text" title="Completa le quest per svelare il messaggio"></div>
+      </div>
+
+      <!-- pannello messaggio -->
+      <div id="msg-panel" class="msg-panel" hidden>
+        <div class="panel-head">
+          <span>✉ MESSAGGIO <span id="msg-count-2">0/5</span></span>
+          <button id="msg-close" class="pixel-btn tiny" type="button" aria-label="Chiudi">X</button>
+        </div>
+        <div id="hidden-text" class="hidden-text"></div>
+        <p class="panel-hint">Ogni quest completata svela un pezzo.</p>
       </div>
 
       <!-- pannello quest -->
       <div id="quest-panel" class="quest-panel" hidden>
-        <div class="quest-panel-head">
+        <div class="panel-head">
           <span>✎ QUEST</span>
           <button id="quest-close" class="pixel-btn tiny" type="button" aria-label="Chiudi">X</button>
         </div>
@@ -68,7 +80,7 @@
       <div id="final-banner" class="final-banner" hidden>
         <div class="final-box">
           <p class="final-title">★ QUEST COMPLETATA ★</p>
-          <p id="final-text" class="final-text"></p>
+          <div id="final-text" class="final-text"></div>
           <button id="final-close" class="pixel-btn" type="button">CONTINUA</button>
         </div>
       </div>

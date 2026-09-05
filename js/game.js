@@ -226,7 +226,7 @@ export class Game {
   }
 
   setTopBound(y) {
-    this.bounds.top = clamp(Math.round(y), 60, 220);
+    this.bounds.top = clamp(Math.round(y), 46, 220);
   }
 
   // ------------------------------------------------------------ spawn
@@ -345,8 +345,8 @@ export class Game {
   // ------------------------------------------------------------ input
   onPointer(e) {
     e.preventDefault();
-    if (this.hud.panelOpen) {
-      this.hud.togglePanel(false);
+    if (this.hud.anyPanelOpen) {
+      this.hud.closePanels();
       return;
     }
     const rect = this.canvas.getBoundingClientRect();

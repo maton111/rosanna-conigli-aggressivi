@@ -23,8 +23,9 @@ export const PHRASES = [
 // Frase del coniglio dorato (quello nascosto).
 export const GOLDEN_PHRASE = "Mi hai trovato! Sei incredibile, cuoricino ★";
 
-// Messaggio nascosto in alto: UN pezzo per OGNI quest, nello stesso ordine
-// della lista QUESTS qui sotto. Si svela un pezzo alla volta.
+// Messaggio nascosto: UN pezzo per OGNI quest. Si svelano sempre in
+// quest'ordine (prima quest completata = primo pezzo, seconda = secondo...),
+// qualunque sia la quest che viene risolta.
 export const HIDDEN_TEXT = [
   "Ciao scema, scusa per il love bombing e i vari bug presenti in sto giochino, ho fatto tutto di corsa in ste ore. ",
   "Oggi ho avuto modo di riflettere un pochino e diciamo che sto un pochino male per la situa perchè non ho avuto modo di poterti conoscere, ",

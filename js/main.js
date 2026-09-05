@@ -39,16 +39,24 @@ const getScale = () => scale;
 const title = new TitleScreen($("#title-canvas"));
 
 const tracker = new QuestTracker({
-  onComplete(quest, index) {
+  onComplete(quest) {
     sfx.quest();
     hud.showToast(`✓ QUEST COMPLETATA!\n${quest.title}`);
-    hud.unlockSegment(index);
+    hud.revealNext(); // svela il pezzo successivo del messaggio, sempre in ordine
     hud.markNew();
   },
   onAllComplete() {
     sfx.complete();
     game?.celebrate();
-    setTimeout(() => hud.showFinal(), 1800);
+    // il finale aspetta che il messaggio abbia finito di scriversi
+    const whenDone = () => {
+      if (hud.revealing) {
+        setTimeout(whenDone, 400);
+        return;
+      }
+      hud.showFinal();
+    };
+    setTimeout(whenDone, 1200);
   },
   onUpdate() {
     hud.renderQuests();

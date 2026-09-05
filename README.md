@@ -5,8 +5,9 @@ Un mini videogioco in pixel art, fatto per Rosanna.
 1. Si apre con una schermata da videogioco medieval fantasy e un solo tasto **START**.
 2. START porta in un prato verticale pieno di **conigli aggressivi** che saltellano.
 3. Tocca (o clicca) un coniglio: diventa **carino** e dice una frase gentile.
-4. In alto: **⌂ HOME** a sinistra, **✎ QUEST** a destra e, al centro, un **messaggio nascosto**
-   che si svela un pezzo alla volta completando le quest.
+4. In alto: **⌂ HOME** a sinistra, **✉** al centro (il messaggio nascosto) e **✎ QUEST** a destra.
+   Ogni quest completata svela un pezzo del messaggio: il pannello si apre da solo e il testo
+   compare con l'effetto macchina da scrivere. Il tasto ✉ lo riapre per rileggerlo quando si vuole.
 
 Nessuna dipendenza, nessuna build: è solo HTML, CSS e JavaScript. Va bene così com'è su GitHub Pages.
 
@@ -18,9 +19,13 @@ Tutto sta in [`js/config.js`](js/config.js):
 |---|---|
 | Frasi dei conigli | `PHRASES` |
 | Frase del coniglio dorato | `GOLDEN_PHRASE` |
-| Messaggio nascosto (un pezzo per quest, nello stesso ordine di `QUESTS`) | `HIDDEN_TEXT` |
+| Messaggio nascosto (un pezzo per quest) | `HIDDEN_TEXT` |
 | Titoli delle quest | `QUESTS` (non cambiare gli `id`) |
 | Numero di conigli, carote, secondi della quest "veloce" | `RABBIT_COUNT`, `CARROT_COUNT`, `FAST_QUEST_SECONDS` |
+
+I pezzi di `HIDDEN_TEXT` escono **sempre nell'ordine in cui sono scritti**: la prima quest
+completata svela il pezzo 1, la seconda il pezzo 2 e così via, qualunque quest venga risolta.
+Quindi il messaggio si legge sempre nel senso giusto.
 
 Il progresso delle quest viene salvato nel browser (`localStorage`), quindi resta anche tornando alla
 home o ricaricando la pagina. Nel pannello quest c'è un link **reset progresso** per ricominciare.
@@ -63,7 +68,7 @@ js/pixel.js       utility per gli sprite
 js/title.js       schermata iniziale
 js/game.js        il prato e i conigli
 js/quests.js      quest e salvataggio
-js/hud.js         testo nascosto, pannello quest, toast, banner finale
+js/hud.js         pannello messaggio, pannello quest, toast, banner finale
 js/sfx.js         suoni 8-bit generati con WebAudio
 js/main.js        avvio e cambio schermata
 ```

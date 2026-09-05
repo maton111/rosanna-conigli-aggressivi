@@ -108,7 +108,9 @@ export class QuestTracker {
   }
 }
 
-// Segmenti del testo nascosto, uno per quest (nello stesso ordine).
+// Pezzi del messaggio nascosto, nell'ordine in cui vanno letti.
+// Si svelano in ordine: il primo pezzo con la prima quest completata,
+// il secondo con la seconda, e così via — non importa QUALE quest sia.
 export function textSegments() {
   return QUESTS.map((q, i) => ({ questId: q.id, text: HIDDEN_TEXT[i] ?? "" }));
 }
