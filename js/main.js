@@ -121,6 +121,10 @@ window.rosanna = {
 // ---------------------------------------------------------------- avvio
 window.addEventListener("resize", resize);
 window.addEventListener("orientationchange", () => setTimeout(resize, 150));
+window.visualViewport?.addEventListener("resize", resize);
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") resize();
+});
 if (document.fonts?.ready) document.fonts.ready.then(resize);
 resize();
 title.start();
