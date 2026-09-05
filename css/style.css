@@ -319,7 +319,6 @@ canvas {
   from { transform: scale(.94); }
   to { transform: none; }
 }
-.quest-panel, .final-box { animation: pop-in .2s steps(3) both; }
 .toast { white-space: pre-line; }
 
 /* ---------- pannello quest ---------- */
@@ -339,7 +338,7 @@ canvas {
   box-shadow:
     0 0 0 calc(3 * var(--u)) var(--ink),
     calc(4 * var(--u)) calc(4 * var(--u)) 0 calc(3 * var(--u)) var(--ink);
-  animation: bubble-in .15s steps(3) both;
+  animation: pop-in .2s steps(3) both;
 }
 .panel-head {
   flex: none;
