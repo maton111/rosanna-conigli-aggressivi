@@ -50,6 +50,13 @@ python -m http.server 8080
 
 Poi apri <http://localhost:8080>.
 
+## Cache del browser
+
+`index.html` carica il CSS come `css/style.css?v=2`. Se cambi il foglio di stile e il sito online
+sembra ancora quello vecchio, alza quel numero (`?v=3`, `?v=4`...): i browser che avevano in cache
+la versione precedente scaricano subito quella nuova. Per i file in `js/` non serve: GitHub Pages
+li tiene in cache per pochi minuti e poi si aggiornano da soli.
+
 ## Pubblicare su GitHub Pages
 
 1. Crea un repository su GitHub e fai il push di questa cartella sul branch `main`.
