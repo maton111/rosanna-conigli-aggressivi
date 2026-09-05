@@ -6,31 +6,31 @@
 // Frasi che dicono i conigli quando diventano carini (a rotazione, mai due
 // volte di fila la stessa). Aggiungine quante vuoi.
 export const PHRASES = [
-  "Rosanna sei la migliore!",
+  "Patatina sei la migliore!",
   "Grazie di tutto ♥",
-  "Ce la puoi fare, sei la migliore!",
+  "Mi dispiace per quello che hai passato :(",
   "Anche nel casino, brilli sempre.",
   "Un passo alla volta: ce la fai!",
   "Sei più forte di quello che pensi.",
   "Il mondo è più carino con te dentro.",
-  "Respira. Va tutto bene. Ci sei tu.",
-  "Oggi va così, domani si vola!",
+  "Respira. Va tutto bene. Ce la fai.",
+  "Oggi va così, domani si vede!",
   "Nessuno incasina con stile come te ♥",
-  "Sei una forza della natura.",
-  "Ti meriti tutto il bello che c'è.",
+  "Che palleeeeeee!",
+  "Ti meriti tutto il bello che c'è :)",
 ];
 
 // Frase del coniglio dorato (quello nascosto).
-export const GOLDEN_PHRASE = "Mi hai trovato! Sei incredibile, Rosanna ★";
+export const GOLDEN_PHRASE = "Mi hai trovato! Sei incredibile, cuoricino ★";
 
 // Messaggio nascosto in alto: UN pezzo per OGNI quest, nello stesso ordine
 // della lista QUESTS qui sotto. Si svela un pezzo alla volta.
 export const HIDDEN_TEXT = [
-  "Rosanna, ",
-  "anche quando tutto è incasinato ",
-  "ricordati che sei ",
-  "la persona più forte e più carina che conosco. ",
-  "Ce la farai, sempre ♥",
+  "Ciao scema, scusa per il love bombing e i vari bug presenti in sto giochino, ho fatto tutto di corsa in ste ore. ",
+  "Oggi ho avuto modo di riflettere un pochino e diciamo che sto un pochino male per la situa perchè non ho avuto modo di poterti conoscere, ",
+  "sei una bellissima persona e una brava ragazza e ho ripensato a ieri che mi hai detto che ti serve una cosa facile, ed effettivamente è più facile se io non ci sono :( ",
+  "Quindi a malincuore ma con il solo desiderio di renderti felice e farti sorridere ti dico che pensavo di sparire da qua fino a data da definirsi, magari torno a taranto e ti vengo a cercare. ",
+  "Io voglio fottutamente rimanere, solo che ho paura di addossarti roba, vorrei sapere che ne pensi di sta cosa è ho cercato di farlo nel modo più carino possibile perchè mi sono affezionato... DIO CANE TI ODIO",
 ];
 
 // Quest. L'id NON va cambiato (è usato dal codice), il titolo sì.
